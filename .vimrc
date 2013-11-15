@@ -97,6 +97,8 @@ Bundle 'plasticboy/vim-markdown'
 Bundle 'tomorrow-theme'
 Bundle 'lsdr/monokai'
 Bundle 'VimIM'
+Bundle 'rainbow_parentheses.vim'
+Bundle 'Yggdroot/indentLine'
 
 " Installing plugins the first time
 if iCanHazVundle == 0
@@ -378,3 +380,32 @@ let &termencoding=&encoding
 ""**********************************python格式化***************************
 au FileType python set formatprg=~/.vim/bundle/PythonTidy/PythonTidy.py 
 noremap <F11> gggqG
+""**********************************Better Rainbow Parentheses
+彩色括号设置***************
+let g:rbpt_colorpairs = [
+    \ ['brown',       'RoyalBlue3'],
+    \ ['Darkblue',    'SeaGreen3'],
+    \ ['darkgray',    'DarkOrchid3'],
+    \ ['darkgreen',   'firebrick3'],
+    \ ['darkcyan',    'RoyalBlue3'],
+    \ ['darkred',     'SeaGreen3'],
+    \ ['darkmagenta', 'DarkOrchid3'],
+    \ ['brown',       'firebrick3'],
+    \ ['gray',        'RoyalBlue3'],
+    \ ['black',       'SeaGreen3'],
+    \ ['darkmagenta', 'DarkOrchid3'],
+    \ ['Darkblue',    'firebrick3'],
+    \ ['darkgreen',   'RoyalBlue3'],
+    \ ['darkcyan',    'SeaGreen3'],
+    \ ['darkred',     'DarkOrchid3'],
+    \ ['red',         'firebrick3'],
+    \ ]
+let g:rbpt_max = 16
+let g:rbpt_loadcmd_toggle = 0
+au VimEnter * RainbowParenthesesToggle
+au Syntax * RainbowParenthesesLoadRound
+au Syntax * RainbowParenthesesLoadSquare
+au Syntax * RainbowParenthesesLoadBraces
+
+""**************IndentLine 缩进线设置******************
+let g:indentLine_color_gui = '#A4E57E'  ""颜色
