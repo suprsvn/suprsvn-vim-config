@@ -10,3 +10,6 @@
 将vim配置文件放进~/目录下，运行，Gvim，输入`:BundleInstall`等待插件安装完成即可。
 
 ###三、功能介绍（主要是Python开发的相关功能）
+
+1.预览图一张：
+![预览图](https://raw.github.com/suprsvn/suprsvn-vim-config/master/images/1.png)
